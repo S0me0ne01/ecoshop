@@ -13,7 +13,7 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-not-above bordered
-      style="background: linear-gradient(to bottom, #ffffff, #ffffff)">
+      style="background: linear-gradient(to bottom, #3eff88, #8ef9b7)">
       <q-list>
         <q-item-label header style="color: #000000">
           Полезные ссылки
@@ -29,7 +29,14 @@
 
     <div style="background: linear-gradient(to bottom, #000000, #000000); color: white">
       <q-toolbar>
-        <q-toolbar-title header style="font-weight: bold">&nbsp; Coffee | 2023</q-toolbar-title>
+        <q-toolbar-title header style="font-weight: bold">
+          &nbsp; &nbsp; Coffee | 2023 | Abay Ave 2 &nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp" color="white"
+              size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter" color="white"
+              size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-instagram" color="white" size="md"></q-icon></a>
+        </q-toolbar-title>
       </q-toolbar>
     </div>
   </q-layout>
