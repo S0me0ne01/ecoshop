@@ -39,7 +39,6 @@
     <!-- CONTENT -->
     <div class="q-md row" style="margin: auto">
 
-      <!-- ENROLL -->
       <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding: 10px">
         <q-card square dark class="my-card">
           <q-img src="/images/shop1.jpg" :ratio="16 / 12">
@@ -77,7 +76,7 @@
       <q-card square
         style="border-radius: 10px; overflow: hidden; background: linear-gradient(to bottom, #FFFFFF, #FFFFFF)">
         <q-card-section style="text-align: center; padding: 0px">
-          <h2 style="font-size: 50px">Наше расположение</h2>
+          <h2 style="font-size: 40px">Ул. Абая, дом 2</h2>
         </q-card-section>
 
         <q-card-section style="text-align: center; padding: 30px; padding-top: 0px">
