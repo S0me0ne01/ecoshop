@@ -1,5 +1,5 @@
 <template>
-  <q-page style="background-color: hwb(0 100% 0%)">
+  <q-page style="background-color: #FFFFFF">
     <!-- CAROUSEL -->
     <div class="q-md">
       <q-carousel animated v-model="slide" class="carousel" :class="{ 'full-height': isFullHeight }" arrows navigation
@@ -13,7 +13,7 @@
 
 
     <!-- LIST -->
-    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center">
 
       <div class="custom-item text-center">
         <q-avatar size="200px" icon="local_florist" />
@@ -22,15 +22,15 @@
       </div>
 
       <div class="custom-item text-center">
-        <q-avatar size="200px" icon="games" />
-        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">Лицензионные игры</p>
-        <p style="font-size: 25px">Никакого пиратского ПО</p>
+        <q-avatar size="200px" icon="workspace_premium" />
+        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">Гарантия качества</p>
+        <p style="font-size: 25px">Мы сотрудничаем только с лучшими брендами и <br/>можем гарантировать вам качество товаров</p>
       </div>
 
       <div class="custom-item text-center">
-        <q-avatar size="200px" icon="insert_emoticon" />
-        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">Классная атмосфера</p>
-        <p style="font-size: 25px">Гарантируем комфортный игровой опыт</p>
+        <q-avatar size="200px" icon="favorite" />
+        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">Забота о здоровье</p>
+        <p style="font-size: 25px">Организм скажет вам спасибо</p>
       </div>
 
     </div>
@@ -45,7 +45,7 @@
           <q-img src="/images/shop1.jpg" :ratio="16 / 12">
             <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
               <p style="font-size: large; font-weight: bold">О нас</p>
-              <p style="font-size: large">Ознакомтесь с нашей захватывающей историей и ценностями</p>
+              <p style="font-size: large">Ознакомьтесь с нашей захватывающей историей и ценностями</p>
 
               <p style="font-size: medium; font-weight: bold; text-shadow: 1px rgb(35, 35, 35)">
                 <q-btn href="/about" outline rounded color="white" label="Подробнее" />
@@ -71,6 +71,25 @@
         </q-card>
       </div>
     </div>
+
+    <!-- INFO -->
+    <q-container>
+      <q-card square
+        style="border-radius: 10px; overflow: hidden; background: linear-gradient(to bottom, #FFFFFF, #FFFFFF)">
+        <q-card-section style="text-align: center; padding: 0px">
+          <h2 style="font-size: 50px">Наше расположение</h2>
+        </q-card-section>
+
+        <q-card-section style="text-align: center; padding: 30px; padding-top: 0px">
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.8932537808346!2d76.86659347608303!3d43.23269767112514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369a87d5f7551%3A0x8e70b7a65d73f497!2sAbay%20Ave%202%2C%20Almaty%20050000!5e0!3m2!1sen!2skz!4v1700214471126!5m2!1sen!2skz"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </q-card-section>
+      </q-card>
+    </q-container>
   </q-page>
 </template>
 
