@@ -27,15 +27,15 @@
       <router-view />
     </q-page-container>
 
-    <div style="background: linear-gradient(to bottom, #000000, #000000); color: white">
+    <div>
       <q-toolbar>
-        <q-toolbar-title header style="font-weight: bold">
-          &nbsp; &nbsp; EcoShop | 2023 | Abay Ave 2 &nbsp;
-          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp" color="white"
-              size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
-          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter" color="white"
-              size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
-          <a href="/" style="color: #000000"><q-icon name="ion-logo-instagram" color="white" size="md"></q-icon></a>
+        <q-toolbar-title header style="font-weight: bold; font-size: 15px">
+          &nbsp; &nbsp; EcoShop &nbsp; 2023 &nbsp; Abay Ave 2 &nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp"
+              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter"
+              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-instagram" size="sm"></q-icon></a>
         </q-toolbar-title>
       </q-toolbar>
     </div>
