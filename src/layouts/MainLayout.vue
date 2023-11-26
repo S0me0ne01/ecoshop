@@ -13,8 +13,8 @@
           <q-btn flat color="black" icon="language">
             <q-menu fit dark transition-show="scale" transition-hide="scale">
               <q-list style="min-width: 100px">
-                <q-select dark v-model="locale" :options="localeOptions" dense borderless emit-value map-options options-dense
-                  style="min-width: 150px; padding: 10px">
+                <q-select dark v-model="locale" :options="localeOptions" dense borderless emit-value map-options
+                  options-dense style="min-width: 150px; padding: 10px">
                 </q-select>
               </q-list>
             </q-menu>
@@ -43,10 +43,8 @@
       <q-toolbar>
         <q-toolbar-title header style="font-weight: bold; font-size: 15px">
           &nbsp; &nbsp; EcoShop &nbsp; 2023 &nbsp; Abay Ave 2 &nbsp;
-          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp"
-              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
-          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter"
-              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp" size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter" size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
           <a href="/" style="color: #000000"><q-icon name="ion-logo-instagram" size="sm"></q-icon></a>
         </q-toolbar-title>
       </q-toolbar>
@@ -68,25 +66,21 @@ export default defineComponent({
 
   setup() {
     const { locale } = useI18n({ useScope: 'global' })
-    const t = useI18n({ useScope: 'global' })
     const leftDrawerOpen = ref(false)
 
     const linksList = [
       {
         title: 'Instagram',
         icon: 'ion-logo-instagram',
-        caption: t('drawer.instagram'),
         link: 'https://instagram.com'
       },
       {
         title: 'Twitter',
-        caption: t('drawer.twitter'),
         icon: 'ion-logo-twitter',
         link: 'https://x.com'
       },
       {
         title: 'WhatsApp',
-        caption: t('drawer.whatsapp'),
         icon: 'ion-logo-whatsapp',
         link: 'https://facebook.com'
       }

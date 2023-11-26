@@ -4,6 +4,6 @@ import ru from "./ru";
 
 export default {
   "en-US": enUS,
-  "kz": kz,
-  "ru": ru,
+  kz: kz,
+  ru: ru,
 };
