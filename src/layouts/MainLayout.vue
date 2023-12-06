@@ -9,15 +9,15 @@
           &nbsp;&nbsp;<a href="/"><img src="/images/logo.png" height="50" style="padding-top: 8px" /></a>
         </q-toolbar-title>
 
-        <q-toolbar-title>
-          <q-btn flat color="black" icon="language">
-            <q-menu fit dark transition-show="scale" transition-hide="scale">
-              <q-list style="min-width: 100px">
-                <q-select dark v-model="locale" :options="localeOptions" dense borderless emit-value map-options options-dense
-                  style="min-width: 150px; padding: 10px">
-                </q-select>
-              </q-list>
-            </q-menu>
+        <q-toolbar-title style="text-align: end; padding-right: 20px">
+          <q-btn flat>
+
+            <q-list style="width: 80px">
+              <q-select v-model="locale" :options="localeOptions" dense borderless emit-value map-options
+                options-dense style="padding: 10px">
+              </q-select>
+            </q-list>
+
           </q-btn>
         </q-toolbar-title>
 
@@ -75,18 +75,15 @@ export default defineComponent({
       {
         title: 'Instagram',
         icon: 'ion-logo-instagram',
-        caption: t('drawer.instagram'),
         link: 'https://instagram.com'
       },
       {
         title: 'Twitter',
-        caption: t('drawer.twitter'),
         icon: 'ion-logo-twitter',
         link: 'https://x.com'
       },
       {
         title: 'WhatsApp',
-        caption: t('drawer.whatsapp'),
         icon: 'ion-logo-whatsapp',
         link: 'https://facebook.com'
       }
