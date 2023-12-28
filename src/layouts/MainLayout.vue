@@ -18,7 +18,7 @@
           <q-btn flat>
 
             <q-list style="width: 80px">
-              <q-select v-model="locale" :options="localeOptions" dense borderless emit-value map-options
+              <q-select :dark="theme == 'dark'" v-model="locale" :options="localeOptions" dense borderless emit-value map-options
                 options-dense style="padding: 10px">
               </q-select>
             </q-list>
