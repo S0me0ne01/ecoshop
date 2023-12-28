@@ -1,5 +1,5 @@
 <template>
-  <q-page style="background-color: hsl(0, 0%, 100%)">
+  <q-page :class="theme">
 
     <div class="article-content">
 
@@ -18,23 +18,36 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 import { useQuasar } from 'quasar'
+
+import { useBaseStore } from "src/stores/base-store.js";
+const baseStore = useBaseStore();
 
 export default defineComponent({
   name: 'About',
 
   setup() {
     const $q = useQuasar()
+    const theme = computed(() => baseStore.getTheme)
 
     return {
-
+      theme,
     }
   }
 })
 </script>
 
 <style scoped>
+.light {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.dark {
+  background-color: #000000;
+  color: #FFFFFF;
+}
 .article-content {
   display: flex;
   flex-direction: column;

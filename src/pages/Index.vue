@@ -1,5 +1,5 @@
 <template>
-  <q-page style="background-color: #FFFFFF">
+  <q-page :class="theme">
     <!-- CAROUSEL -->
     <div class="q-md">
       <q-carousel animated v-model="slide" class="carousel" :class="{ 'full-height': isFullHeight }" arrows navigation
@@ -16,8 +16,8 @@
     <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center">
 
       <div class="custom-item text-center">
-        <q-avatar size="200px" icon="local_florist" />
-        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px; white-space: pre-line">
+        <q-avatar size="200px" color="primary" icon="local_florist" />
+        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px; white-space: pre-line" :class="theme">
           {{ $t("list.title1") }}
         </p>
         <p style="font-size: 25px; white-space: pre-line">
@@ -26,7 +26,7 @@
       </div>
 
       <div class="custom-item text-center">
-        <q-avatar size="200px" icon="workspace_premium" />
+        <q-avatar size="200px" color="primary" icon="workspace_premium" />
         <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px; white-space: pre-line">
           {{ $t("list.title2") }}
         </p>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="custom-item text-center">
-        <q-avatar size="200px" icon="favorite" />
+        <q-avatar size="200px" color="primary" icon="favorite" />
         <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px; white-space: pre-line">
           {{ $t("list.title3") }}
         </p>
@@ -85,7 +85,7 @@
     <!-- INFO -->
     <q-container>
       <q-card square
-        style="border-radius: 10px; overflow: hidden; background: linear-gradient(to bottom, #FFFFFF, #FFFFFF)">
+        style="border-radius: 10px; overflow: hidden" :class="theme">
         <q-card-section style="text-align: center; padding: 0px">
           <h2 style="font-size: 40px">{{ $t("location.title") }}</h2>
         </q-card-section>
@@ -104,25 +104,40 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 import { useQuasar } from 'quasar'
+
+import { useBaseStore } from "src/stores/base-store.js";
+const baseStore = useBaseStore();
 
 export default defineComponent({
   name: 'Index',
 
   setup() {
     const $q = useQuasar()
+    const theme = computed(() => baseStore.getTheme)
 
     return {
       slide: ref(1),
       autoplay: ref(true),
       isFullHeight: ref(),
+      theme,
     }
   }
 })
 </script>
 
 <style scoped>
+.light {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.dark {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
 .map-frame {
   max-width: 400px;
   margin: 0 auto;
